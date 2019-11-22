@@ -317,16 +317,7 @@ google_analytics <- function(viewId,
                              slow_fetch = FALSE,
                              useResourceQuotas= NULL,
                              rows_per_call = 10000L){
-  
-  if(is_default_project()){
-    if(!interactive()){
-      default_project_message()
-      stop("The default Google Cloud Project for googleAnalyticsR is intended 
-           \nfor evalutation only, not production scripts.  
-           \nPlease set your own client.id and client.secret via googleAuthR::gar_set_client()
-           \nor otherwise as suggested on the website.", call. = FALSE)
-    }
-  }
+ 
   
   timer_start <- Sys.time()
 
